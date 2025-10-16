@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="addpara()">Add Para</button>
+    <p id="para1">This is old Paragraph</p>
+    <script>
+        count =0;
+        function addpara(){
+            count++
+            const para=document.createElement('p')
+            para.innerHTML =` &nbsp &nbsp This is new Paragraph ${count}`
+            para.style.background="yellow"
+            para.style.color="Red" 
+            const id= document.getElementById("para1")
+            id.append(para); 
+        }
+    </script>
+</body>
+</html>
